@@ -2,10 +2,24 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Style for the recycler view item "data supplier"'s text view -->
+    <style name="ItemSupplierText" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@android:color/tertiary_text_light</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <!-- Style for the recycler view item title (e.g, name for supplier, product name for product) -->
+    <style name="RecyclerItemTitle" parent="ItemSupplierText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
 </resources>
