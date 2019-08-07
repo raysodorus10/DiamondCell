@@ -13,9 +13,18 @@
         tools:text="OPPO OFFICIAL DISTRIBUTOR"/>
 
     <TextView
+        android:id="@+id/item_supplier_status"
+        style="@style/ItemSupplierText"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/item_supplier_nama"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="AKTIF"/>
+
+    <TextView
         android:id="@+id/item_supplier_email"
         style="@style/ItemSupplierText"
-        app:layout_constraintTop_toBottomOf="@id/item_supplier_nama"
+        app:layout_constraintTop_toBottomOf="@id/item_supplier_status"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="oppodist@oppo.com"/>
 
@@ -23,15 +32,15 @@
         android:id="@+id/item_supplier_alamat"
         style="@style/ItemSupplierText"
         app:layout_constraintTop_toBottomOf="@id/item_supplier_email"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:text="Makassar"/>
 
     <TextView
         android:id="@+id/item_supplier_telp"
         style="@style/ItemSupplierText"
         android:drawableStart="@android:drawable/ic_menu_call"
-        app:layout_constraintTop_toBottomOf="@id/item_supplier_nama"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_supplier_email"
+        app:layout_constraintStart_toStartOf="parent"
         tools:text="+6281059089814081"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
