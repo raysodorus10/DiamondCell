@@ -10,7 +10,7 @@ public class Supplier {
     private String mKontak;
     private boolean mStatus = false;
 
-    public Supplier(String kode, String nama, String alamat, String telp, String hp, String email, String kontak, boolean status) {
+    public Supplier (String kode, String nama, String alamat, String telp, String hp, String email, String kontak, boolean status) {
         setKode(kode);
         setNama(nama);
         setAlamat(alamat);
