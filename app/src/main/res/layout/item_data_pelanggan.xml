@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/item_pelanggan_nama"
+        style="@style/RecyclerItemTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Alexander Cell"/>
+
+    <TextView
+        android:id="@+id/item_pelanggan_status"
+        style="@style/RecyclerItemText"
+        android:textColor="@android:color/holo_green_light"
+        app:layout_constraintTop_toBottomOf="@id/item_pelanggan_nama"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="AKTIF"/>
+
+    <TextView
+        android:id="@+id/item_pelanggan_email"
+        style="@style/RecyclerItemText"
+        app:layout_constraintTop_toBottomOf="@id/item_pelanggan_status"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="alexanderKing991@gmail.com"/>
+
+    <TextView
+        android:id="@+id/item_pelanggan_telepon"
+        style="@style/RecyclerItemText"
+        android:drawableStart="@android:drawable/ic_menu_call"
+        app:layout_constraintTop_toBottomOf="@id/item_pelanggan_email"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="+6290901251902842"/>
+
+    <TextView
+        android:id="@+id/item_pelanggan_alamat"
+        style="@style/RecyclerItemText"
+        app:layout_constraintTop_toBottomOf="@id/item_pelanggan_telepon"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Makassar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
