@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/item_barang_nama"
-        android:layout_width=""
-        android:layout_height="" />
+        style="@style/RecyclerItemTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="OPPO F11 PRO"/>
 
     <TextView
         android:id="@+id/item_barang_id"
-        android:layout_width=""
-        android:layout_height="" />
+        style="@style/RecyclerItemText"
+        app:layout_constraintTop_toBottomOf="@id/item_barang_nama"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="82105981902830"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
