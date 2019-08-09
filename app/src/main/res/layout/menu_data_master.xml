@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_supplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_pelanggan"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:textSize="23sp"
+        android:drawableStart="@drawable/ic_hotel_supplier"
+        android:text="Supplier" />
+
+    <Button
+        android:id="@+id/btn_pelanggan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="Pelanggan"
+        android:layout_centerHorizontal="true"
+        android:textSize="23sp"
+        android:drawableStart="@drawable/ic_specialist_user"
+        android:layout_centerVertical="true"/>
+    <Button
+        android:id="@+id/btn_sales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@id/btn_pelanggan"
+        android:drawableStart="@drawable/ic_salesman"
+        android:textSize="23sp"
+        android:layout_centerHorizontal="true"
+        android:text="Sales"/>
+
+</RelativeLayout>
