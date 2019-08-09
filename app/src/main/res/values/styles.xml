@@ -23,4 +23,18 @@
         <item name="android:textColor">@android:color/black</item>
     </style>
 
+
+    <!-- Style untuk label pada activity detail -->
+    <style name="DetailLabel">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- Style untuk value pada activity detail -->
+    <style name="DetailValue">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
 </resources>
