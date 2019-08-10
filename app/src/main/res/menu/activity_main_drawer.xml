@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@android:drawable/ic_dialog_dialer"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_data_master"
+            android:icon="@android:drawable/ic_menu_save"
+            android:title="@string/menu_data_master"/>
+        <item
+            android:id="@+id/nav_pembelian"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="@string/menu_pembelian" />
+        <item
+            android:id="@+id/nav_penjualan"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_penjualan" />
+        <item
+            android:id="@+id/nav_transaksi_lain"
+            android:icon="@drawable/ic_hotel_supplier"
+            android:title="@string/menu_transaksi_lain" />
+    </group>
+
+    <item android:title="Fitur Lain">
+        <menu>
+            <item
+                android:id="@+id/nav_utility"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/menu_utility" />
+            <item
+                android:id="@+id/nav_sign_out"
+                android:icon="@android:drawable/ic_menu_revert"
+                android:title="@string/menu_sign_out" />
+        </menu>
+    </item>
+
+</menu>
