@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".DetailSupplierActivity"
+android:padding="8dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:columnCount="4">
+
+        <!-- Kode Supplier -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Kode"
+            style="@style/DetailLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:text=":"
+            style="@style/DetailLabel"
+            />
+        <TextView
+            android:id="@+id/tv_kode_sup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="2"
+            android:text="098765432234567"
+            style="@style/DetailValue"/>
+        <TextView
+            android:layout_height="48dp"
+            />
+        <!-- _______________________________________________________________________________________ -->
+
+        <!-- Nama Supplier -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Nama"
+            style="@style/DetailLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:text=":"
+            style="@style/DetailLabel"
+            />
+        <TextView
+            android:id="@+id/tv_nama_sup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="2"
+            android:text="AV Industries"
+            style="@style/DetailValue"/>
+        <TextView
+            android:layout_height="48dp"
+            />
+        <!-- _______________________________________________________________________________________ -->
+
+        <!-- Alamat Supplier -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Alamat"
+            style="@style/DetailLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:text=":"
+            style="@style/DetailLabel"
+            />
+        <TextView
+            android:id="@+id/tv_alamat_sup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="2"
+            android:text="Sweet Home Alabama"
+            style="@style/DetailValue"/>
+        <TextView
+            android:layout_height="48dp"
+            />
+        <!-- _______________________________________________________________________________________ -->
+
+        <!-- Telepon Supplier -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Telepon"
+            style="@style/DetailLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:text=":"
+            style="@style/DetailLabel"
+            />
+        <TextView
+            android:id="@+id/tv_telepon_sup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="2"
+            android:text="+62476-5432-1000"
+            style="@style/DetailValue"/>
+        <ImageButton
+            android:id="@+id/btn_telepon_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/sym_call_outgoing"
+            />
+        <!-- _______________________________________________________________________________________ -->
+
+        <!-- Handphone Supplier -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Handphone"
+            style="@style/DetailLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:text=":"
+            style="@style/DetailLabel"
+            />
+        <TextView
+            android:id="@+id/tv_hp_sup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="2"
+            android:text="+62876-5432-1000"
+            style="@style/DetailValue"/>
+        <ImageButton
+            android:id="@+id/btn_hp_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/sym_call_outgoing"
+            />
+        <!-- _______________________________________________________________________________________ -->
+
+        <!-- E-mail Supplier -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="E-mail"
+            style="@style/DetailLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:text=":"
+            style="@style/DetailLabel"
+            />
+        <TextView
+            android:id="@+id/tv_email_sup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="2"
+            android:text="johnny@email.com"
+            style="@style/DetailValue"/>
+        <ImageButton
+            android:id="@+id/btn_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_email"
+            />
+        <!-- _______________________________________________________________________________________ -->
+
+        <!-- Kontak Supplier -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Kontak"
+            style="@style/DetailLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:text=":"
+            style="@style/DetailLabel"
+            />
+        <TextView
+            android:id="@+id/tv_kontak_sup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="2"
+            android:text="Johnny Sins"
+            style="@style/DetailValue"/>
+        <TextView
+            android:layout_height="48dp"
+            />
+        <!-- _______________________________________________________________________________________ -->
+
+        <!-- Status Supplier -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Status"
+            style="@style/DetailLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:text=":"
+            style="@style/DetailLabel"
+            />
+        <TextView
+            android:id="@+id/tv_status_sup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="2"
+            android:text="Aktif"
+            style="@style/DetailValue"/>
+        <TextView
+            android:layout_height="48dp"
+            />
+        <!-- _______________________________________________________________________________________ -->
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:text="Kembali"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"/>
+</RelativeLayout>
+</ScrollView>

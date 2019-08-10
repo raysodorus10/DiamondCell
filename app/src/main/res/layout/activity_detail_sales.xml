@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailSalesActivity"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:columnCount="4">
+
+            <!-- Kode Sales -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Kode"
+                style="@style/DetailLabel"
+                android:layout_marginBottom="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_kode_sales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="098765432234567"
+                style="@style/DetailValue"/>
+            <ImageView
+                android:id="@+id/img_sales"
+                android:layout_width="96dp"
+                android:layout_height="98dp"
+                android:layout_rowSpan="3"
+                android:scaleType="fitXY"
+                android:src="@android:drawable/ic_menu_gallery"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Nama Sales -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Nama"
+                style="@style/DetailLabel"
+                android:layout_marginBottom="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_nama_sales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="Johnny Sins"
+                style="@style/DetailValue"/>
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Alamat Sales -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Alamat"
+                style="@style/DetailLabel"
+                android:layout_marginBottom="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_alamat_sales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="Sweet Home Alabama"
+                style="@style/DetailValue"/>
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Handphone Sales -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Handphone"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_hp_sales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="+62876-5432-1000"
+                style="@style/DetailValue"/>
+            <ImageButton
+                android:id="@+id/btn_hp_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/sym_call_outgoing"
+                android:layout_gravity="center"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Jabatan Sales -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Jabatan"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_jabatan_sales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="PEGAWAI"
+                style="@style/DetailValue"/>
+            <TextView
+                android:layout_height="48dp"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Jenis Kelamin Sales -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Jenis Kelamin"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_kelamin_sales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="PEREMPUAN"
+                style="@style/DetailValue"/>
+            <TextView
+                android:layout_height="48dp"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Agama Sales -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Agama"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_agama_sales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="BUDDHA"
+                style="@style/DetailValue"/>
+            <TextView
+                android:layout_height="48dp"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Tempat / Tanggal Lahir Sales -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Tempat / Tgl Lahir"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_tempat_lahir_sales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Makassar"
+                    style="@style/DetailValue"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=", "
+                    style="@style/DetailValue"/>
+                <TextView
+                    android:id="@+id/tv_tanggal_lahir_sales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="29/02/2012"
+                    style="@style/DetailValue"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_height="48dp"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- E-mail Sales -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="E-mail"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_email_sales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="johnny@email.com"
+                style="@style/DetailValue"/>
+            <ImageButton
+                android:id="@+id/btn_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_email"
+                android:layout_gravity="center"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Status Sales -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Status"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_status_sales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="Aktif"
+                style="@style/DetailValue"/>
+            <TextView
+                android:layout_height="48dp"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btn_kembali"
+            style="@android:style/Widget.Material.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:padding="8dp"
+            android:text="Kembali" />
+
+    </RelativeLayout>
+
+</ScrollView>
