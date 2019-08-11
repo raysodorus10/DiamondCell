@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailPelangganActivity"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:columnCount="4">
+
+            <!-- Kode Pelanggan -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Kode"
+                style="@style/DetailLabel"
+                android:layout_marginBottom="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_kode_pelanggan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="098765432234567"
+                style="@style/DetailValue"/>
+            <ImageView
+                android:id="@+id/img_pelanggan"
+                android:layout_width="96dp"
+                android:layout_height="98dp"
+                android:layout_rowSpan="3"
+                android:scaleType="fitXY"
+                android:src="@android:drawable/ic_menu_gallery"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Alamat Pelanggan -->
+            <TextView
+                style="@style/DetailLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="24dp"
+                android:text="Tgl. Input" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_tanggal_input_pelanggan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="17-08-1945"
+                style="@style/DetailValue"/>
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Nama Pelanggan -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Nama"
+                style="@style/DetailLabel"
+                android:layout_marginBottom="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_nama_pelanggan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="Johnny Sins"
+                style="@style/DetailValue"/>
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Alamat Pelanggan -->
+            <TextView
+                style="@style/DetailLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="24dp"
+                android:text="Alamat" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_alamat_pelanggan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="Sweet Home Alabama"
+                style="@style/DetailValue"/>
+            <TextView
+                android:layout_height="48dp"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Telepon Supplier -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Telepon"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_telepon_pelanggan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="+62476-5432-1000"
+                style="@style/DetailValue"/>
+            <ImageButton
+                android:id="@+id/btn_telepon_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@android:drawable/sym_call_outgoing"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Handphone Pelanggan -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Handphone"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_hp_pelanggan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="+62876-5432-1000"
+                style="@style/DetailValue"/>
+            <ImageButton
+                android:id="@+id/btn_hp_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/sym_call_outgoing"
+                android:layout_gravity="center"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- E-mail Pelanggan -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="E-mail"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_email_pelanggan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="johnny@email.com"
+                style="@style/DetailValue"/>
+            <ImageButton
+                android:id="@+id/btn_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_email"
+                android:layout_gravity="center"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+            <!-- Status Pelanggan -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Status"
+                style="@style/DetailLabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text=":"
+                style="@style/DetailLabel"
+                />
+            <TextView
+                android:id="@+id/tv_status_pelanggan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="2"
+                android:text="Aktif"
+                style="@style/DetailValue"/>
+            <TextView
+                android:layout_height="48dp"
+                />
+            <!-- _______________________________________________________________________________________ -->
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btn_kembali"
+            style="@android:style/Widget.Material.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:padding="8dp"
+            android:text="Kembali" />
+
+    </RelativeLayout>
+
+</ScrollView>
