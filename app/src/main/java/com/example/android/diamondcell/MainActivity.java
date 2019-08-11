@@ -1,11 +1,8 @@
 package com.example.android.diamondcell;
 
+import android.net.Uri;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import android.view.View;
 
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -19,13 +16,18 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener,
+        DashboardFragment.OnFragmentInteractionListener,
+        MenuDataMasterFragment.OnFragmentInteractionListener{
+
+    private final String FRAGMENT_DASHBOARD_TAG = "DASHBOARD";
+    private final String FRAGMENT_DATAMASTER_TAG = "DATAMASTER";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity
 
         DashboardFragment fragmentAwal = DashboardFragment.newInstance("", "");
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.fragment_container, fragmentAwal)
+                .add(R.id.fragment_container, fragmentAwal, FRAGMENT_DASHBOARD_TAG)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .commit();
     }
@@ -87,13 +89,26 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Fragment newfragment = null;
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
+        //TODO: Perbaiki transisi fragment agar hanya mengambil fragment yang ada di back stack jika ada
         if (id == R.id.nav_home) {
-            newfragment = DashboardFragment.newInstance("", "");
+            Fragment fragment = getSupportFragmentManager().findFragmentByTag(FRAGMENT_DASHBOARD_TAG);
+            if(fragment != null) {
+                transaction.replace(R.id.fragment_container, fragment)
+                    .addToBackStack(null)
+                    .commit();
+            }
         } else if (id == R.id.nav_data_master) {
-            newfragment = MenuDataMasterFragment.newInstance("", "");
+            Fragment fragment = getSupportFragmentManager().findFragmentByTag(FRAGMENT_DATAMASTER_TAG);
+            if (fragment != null) {
+                transaction.replace(R.id.fragment_container, fragment);
+            } else {
+                MenuDataMasterFragment fragmentDataMaster = MenuDataMasterFragment.newInstance("", "");
+                transaction.replace(R.id.fragment_container, fragmentDataMaster, FRAGMENT_DATAMASTER_TAG);
+            }
+            transaction.addToBackStack(null);
+            transaction.commit();
         } else if (id == R.id.nav_pembelian) {
             //TODO:Pindah ke fragment pembelian
         } else if (id == R.id.nav_penjualan) {
@@ -106,12 +121,18 @@ public class MainActivity extends AppCompatActivity
             //TODO:Pindah ke activity login
         }
 
-        transaction.replace(R.id.fragment_container, newfragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onDataMasterFragmentInteraction(Uri uri) {
+        //TODO:Implement Fragment interaction
+    }
+
+    @Override
+    public void onDashboardFragmentInteraction(Uri uri) {
+        //TODO:Implement Fragment interaction
     }
 }

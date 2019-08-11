@@ -72,7 +72,7 @@ public class DashboardFragment extends Fragment {
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onDashboardFragmentInteraction(uri);
         }
     }
 
@@ -105,6 +105,6 @@ public class DashboardFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onDashboardFragmentInteraction(Uri uri);
     }
 }
