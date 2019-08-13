@@ -71,31 +71,30 @@ public class MenuDataMasterFragment extends Fragment {
         buttonSales.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) getActivity()).replaceFramgent(FragmentMasterSales.newInstance("", ""));
+                onButtonPressed(FragmentMasterSales.newInstance("", ""));
             }
         });
 
         buttonPelanggan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO:Pindah ke fragment/activity pelanggan
-                ((MainActivity) getActivity()).replaceFramgent(FragmentMasterPelanggan.newInstance("", ""));
+                onButtonPressed(FragmentMasterPelanggan.newInstance("", ""));
             }
         });
 
         buttonSupplier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) getActivity()).replaceFramgent(FragmentMasterSupplier.newInstance("", ""));
+                onButtonPressed(FragmentMasterSupplier.newInstance("", ""));
             }
         });
         return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
+    public void onButtonPressed(Fragment fragment) {
         if (mListener != null) {
-            mListener.onDataMasterFragmentInteraction(uri);
+            mListener.onDataMasterFragmentInteraction(fragment);
         }
     }
 
@@ -128,6 +127,6 @@ public class MenuDataMasterFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onDataMasterFragmentInteraction(Uri uri);
+        void onDataMasterFragmentInteraction(Fragment fragment);
     }
 }
