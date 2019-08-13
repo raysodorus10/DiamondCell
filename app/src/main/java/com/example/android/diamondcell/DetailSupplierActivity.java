@@ -50,7 +50,7 @@ public class DetailSupplierActivity extends AppCompatActivity {
         btnEmail.setEnabled(false);
 
         // Ambil Objek Supplier
-        // supplier = this.getIntent().getParcelableExtra(SUPPLIER_EXTRA);
+         supplier = this.getIntent().getParcelableExtra(SUPPLIER_EXTRA);
 
         if (supplier != null){
             // isi text view
