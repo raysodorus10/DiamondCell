@@ -24,8 +24,13 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener,
         DashboardFragment.OnFragmentInteractionListener,
-        MenuDataMasterFragment.OnFragmentInteractionListener{
+        MenuDataMasterFragment.OnFragmentInteractionListener,
+        FragmentMasterSupplier.OnFragmentInteractionListener,
+        FragmentMasterSales.OnFragmentInteractionListener,
+        FragmentMasterPelanggan.OnFragmentInteractionListener{
 
+    //Tag yang akan digunakan untuk memanggil ulang fragment
+    //Belum diimplementasikan
     private final String FRAGMENT_DASHBOARD_TAG = "DASHBOARD";
     private final String FRAGMENT_DATAMASTER_TAG = "DATAMASTER";
 
@@ -91,24 +96,10 @@ public class MainActivity extends AppCompatActivity implements
         int id = item.getItemId();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        //TODO: Perbaiki transisi fragment agar hanya mengambil fragment yang ada di back stack jika ada
         if (id == R.id.nav_home) {
-            Fragment fragment = getSupportFragmentManager().findFragmentByTag(FRAGMENT_DASHBOARD_TAG);
-            if(fragment != null) {
-                transaction.replace(R.id.fragment_container, fragment)
-                    .addToBackStack(null)
-                    .commit();
-            }
+            replaceFramgent(DashboardFragment.newInstance("", ""));
         } else if (id == R.id.nav_data_master) {
-            Fragment fragment = getSupportFragmentManager().findFragmentByTag(FRAGMENT_DATAMASTER_TAG);
-            if (fragment != null) {
-                transaction.replace(R.id.fragment_container, fragment);
-            } else {
-                MenuDataMasterFragment fragmentDataMaster = MenuDataMasterFragment.newInstance("", "");
-                transaction.replace(R.id.fragment_container, fragmentDataMaster, FRAGMENT_DATAMASTER_TAG);
-            }
-            transaction.addToBackStack(null);
-            transaction.commit();
+            replaceFramgent(MenuDataMasterFragment.newInstance("", ""));
         } else if (id == R.id.nav_pembelian) {
             //TODO:Pindah ke fragment pembelian
         } else if (id == R.id.nav_penjualan) {
@@ -116,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements
         } else if (id == R.id.nav_transaksi_lain) {
             //TODO:Pindah ke fragment transaksi lain
         } else if (id == R.id.nav_utility) {
-            //TODO:Pidnah ke fragment utility
+            //TODO:Pindah ke fragment utility
         } else {
             //TODO:Pindah ke activity login
         }
@@ -134,5 +125,29 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onDashboardFragmentInteraction(Uri uri) {
         //TODO:Implement Fragment interaction
+    }
+
+    @Override
+    public void onFragmentPelangganInteraction(Uri uri) {
+        //TODO: Implement Fragment Interaction
+    }
+
+    @Override
+    public void onFragmentSalesInteraction(Uri uri) {
+        //TODO: Implement Fragment Interaction
+    }
+
+    @Override
+    public void onFragmentSupplierInteraction(Uri uri) {
+        //TODO: Implement Fragment Interaction
+    }
+
+    //TODO: Perbaiki transisi fragment agar hanya mengambil fragment yang ada di back stack jika ada
+    public void replaceFramgent(Fragment fragmentClass) {
+        //Meng-handle pergantian fragment pada MainActivity
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, fragmentClass)
+                .addToBackStack(null)
+                .commit();
     }
 }
