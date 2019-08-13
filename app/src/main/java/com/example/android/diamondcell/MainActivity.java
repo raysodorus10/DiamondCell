@@ -108,9 +108,9 @@ public class MainActivity extends AppCompatActivity implements
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            displayFragment(mDashboardFragment);
+            replaceFramgent(mDashboardFragment);
         } else if (id == R.id.nav_data_master) {
-            displayFragment(mMenuDataMasterFragment);
+            replaceFramgent(mMenuDataMasterFragment);
         } else if (id == R.id.nav_pembelian) {
             //TODO:Pindah ke fragment pembelian
         } else if (id == R.id.nav_penjualan) {
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onDataMasterFragmentInteraction(Fragment fragment) {
-        displayFragment(fragment);
+        replaceFramgent(fragment);
     }
 
     @Override
@@ -153,17 +153,33 @@ public class MainActivity extends AppCompatActivity implements
         //TODO: Implement Fragment Interaction
     }
 
-    //TODO: Perbaiki transisi fragment agar hanya mengambil fragment yang ada di back stack jika ada
     public void replaceFramgent(Fragment fragmentClass) {
         //Meng-handle pergantian fragment pada MainActivity
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, fragmentClass)
-                .addToBackStack(null)
-                .commit();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        Fragment oldFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+
+        //Menggantikan fragment yang ada di dalam frame layout dengan fragment yang sesuai
+        if (fragmentClass instanceof DashboardFragment)
+            transaction.replace(R.id.fragment_container, mDashboardFragment);
+        else if (fragmentClass instanceof MenuDataMasterFragment)
+            transaction.replace(R.id.fragment_container, mMenuDataMasterFragment);
+        else if (fragmentClass instanceof FragmentMasterSupplier)
+            transaction.replace(R.id.fragment_container, mMasterSupplierFragment);
+        else if (fragmentClass instanceof FragmentMasterPelanggan)
+            transaction.replace(R.id.fragment_container, mMasterPelangganFragment);
+        else if (fragmentClass instanceof  FragmentMasterSales)
+            transaction.replace(R.id.fragment_container, mMasterSalesFragment);
+
+        //Menambahkan transaksi ke backstack hanya jika ada perpindahan fragment
+        if (!fragmentClass.getClass().equals(oldFragment.getClass()))
+            transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     //TODO: Cari cara lebih efisien untuk menampilkan fragment kalau ada
     //TODO: Ubah item navigation drawer yang di-highlight jika terjadi perpindahan fragment
+    //TODO: Atasi masalah fragment yang menumpuk-numpuk
+    //TODO: Ganti kembali metode replace ke metode ini ketika masalah sudah diatasi
     public void displayFragment(Fragment fragment) {
         //Metode untuk menampilkan dan menyembunyikan fragment lain
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
