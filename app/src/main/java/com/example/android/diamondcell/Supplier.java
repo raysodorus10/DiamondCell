@@ -1,6 +1,9 @@
 package com.example.android.diamondcell;
 
-public class Supplier {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Supplier implements Parcelable {
     private String mKode;
     private String mNama;
     private String mAlamat;
@@ -9,6 +12,9 @@ public class Supplier {
     private String mEmail;
     private String mKontak;
     private boolean mStatus = false;
+
+    public Supplier() {
+    }
 
     public Supplier (String kode, String nama, String alamat, String telp, String hp, String email, String kontak, boolean status) {
         setKode(kode);
@@ -20,6 +26,29 @@ public class Supplier {
         setKontak(kontak);
         setStatus(status);
     }
+
+    protected Supplier(Parcel in) {
+        mKode = in.readString();
+        mNama = in.readString();
+        mAlamat = in.readString();
+        mTelp = in.readString();
+        mHp = in.readString();
+        mEmail = in.readString();
+        mKontak = in.readString();
+        mStatus = in.readByte() != 0;
+    }
+
+    public static final Creator<Supplier> CREATOR = new Creator<Supplier>() {
+        @Override
+        public Supplier createFromParcel(Parcel in) {
+            return new Supplier(in);
+        }
+
+        @Override
+        public Supplier[] newArray(int size) {
+            return new Supplier[size];
+        }
+    };
 
     public String getKode() {
         return mKode;
@@ -85,6 +114,13 @@ public class Supplier {
         this.mStatus = status;
     }
 
+    public String getStatusAsString(){
+        if (mStatus){
+            return "Aktif";
+        }else if (!mStatus){
+            return "Tidak Aktif";
+        }else return "Unkown";
+    }
     public void save() {
         //TODO:Implement method
     }
@@ -99,5 +135,23 @@ public class Supplier {
 
     public void fetch() {
         //TODO:Implement method and add parameter
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+
+        parcel.writeString(mKode);
+        parcel.writeString(mNama);
+        parcel.writeString(mAlamat);
+        parcel.writeString(mTelp);
+        parcel.writeString(mHp);
+        parcel.writeString(mEmail);
+        parcel.writeString(mKontak);
+        parcel.writeByte((byte) (mStatus ? 1 : 0));
     }
 }
