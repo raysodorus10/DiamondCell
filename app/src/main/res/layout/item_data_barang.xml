@@ -3,14 +3,5 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/item_barang_nama"
-        android:layout_width=""
-        android:layout_height="" />
-
-    <TextView
-        android:id="@+id/item_barang_id"
-        android:layout_width=""
-        android:layout_height="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
